@@ -37,7 +37,7 @@ public class Student extends Person implements PersonInterface{
 		}
 	 
 	 public double highScore(double sub1, double sub2, double sub3) {
-		 System.out.println("Inside child class");
+		 
 		 double highestScore;
 		 if(sub1>sub2 && sub1>sub3) {
 			 highestScore = sub1;

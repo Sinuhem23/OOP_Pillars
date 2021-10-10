@@ -19,63 +19,52 @@ public class Starter {
 		System.out.println("What is your name: ");
 		String name = scan.nextLine();
 		stud.setName(name);
-		
-		
 		//Age
 		System.out.println("What is your age: ");
 		int age = scan.nextInt();
 		stud.setAge(age);
-		scan.nextLine();
-		
 		//Gender
+		scan.nextLine();
 		System.out.println("What is your gender: ");
 		String gender = scan.nextLine();
 		stud.setGender(gender);
-		scan.nextLine();
-		
 		//Subject1
+		scan.nextLine();
 		System.out.println("What is your first subject: ");
 		String firstSub = scan.nextLine();
 		stud.setSubject1(firstSub);
-		scan.nextLine();
-		
 		//Grade of Subject 1
+		scan.nextLine();
 		System.out.println("First Subject Grade: ");
 		double firstSubGrade = scan.nextDouble();
 		stud.setSub1Grade(firstSubGrade);
-		scan.nextLine();
-		
 		//Subject2
+		scan.nextLine();
 		System.out.println("What is your second subject: ");
 		String secondSub = scan.nextLine();
 		stud.setSubject2(secondSub);
-		scan.nextLine();
-		
 		//Grade of Subject 2
+		scan.nextLine();
 		System.out.println("Second Subject Grade: ");
 		double secondSubGrade = scan.nextDouble();
 		stud.setSub2Grade(secondSubGrade);
-		scan.nextLine();
-		
 		//Subject3
+		scan.nextLine();
 		System.out.println("What is your third subject: ");
 		String thirdSub = scan.nextLine();
 		stud.setSubject3(thirdSub);
-		scan.nextLine();
-		
 		//Grade of Subject 3
+		scan.nextLine();
 		System.out.println("Third Subject Grade: ");
 		double thirdSubGrade = scan.nextDouble();
 		stud.setSub3Grade(thirdSubGrade);
-		scan.nextLine();
-		
 		//Favorite Subject
+		scan.nextLine();
 		System.out.println("What is your favorite subject: ");
 		String favSub = scan.nextLine();
 		stud.setFavoriteSubject(favSub);
-		scan.nextLine();
-		
 		//Grade Year
+		scan.nextLine();
 		System.out.println("What grade are you in: ");
 		int gradeYear = scan.nextInt();
 		stud.setGradeYear(gradeYear);
@@ -122,7 +111,7 @@ public class Starter {
 	if(gradeYear<12) {
 	System.out.println("You have " + stud1.calculate(gradeYear) + " years left to graduate highschool.");
 	}else if (gradeYear==12) {
-		System.out.println("Last Year!!!");
+		System.out.println("Last Year! of High School!!");
 	}else if (gradeYear > 12){
 		System.out.println("You are surpassed highschool");
 	}else {
