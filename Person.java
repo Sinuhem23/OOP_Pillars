@@ -7,14 +7,14 @@ public class Person {
 		
 		String pName;
 		int pAge;
-		char pGender;
+		String pGender;
 		
 		
 		public Person() {
 			
 		}
 		
-		public Person(String pName, int pAge, char pGender) {
+		public Person(String pName, int pAge, String pGender) {
 			this.pName = pName;
 			this.pAge = pAge;
 			this.pGender = pGender;
