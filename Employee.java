@@ -28,11 +28,11 @@ public class Employee extends Person implements PersonInterface {
 		System.out.println("Employee Salary: " + "$" + this.employeeSalary);
 		System.out.println("Employee Title: " + this.employeeTitle);
 		System.out.println("Bonus: " + "$" + this.bonus);
-		System.out.println("Employee's Net Salary: " + "$"+ calculate(this.bonus));
+		//System.out.println("Employee's Net Salary: " + "$"+ calculate(this.bonus));
 		 
 	}
 	
-	public double calculate(double bonus) {
+	public double calculate(int bonus) {
 		double netSalary = bonus + this.employeeSalary;
 		return netSalary;
 	}

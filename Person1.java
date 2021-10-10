@@ -20,6 +20,7 @@ public class Person1 {
 	private String subject3;
 	private double sub3Grade;
 	private String favoriteSubject;
+	private int gradeYear;
 	
 	public int getAge() {
 		return age;
@@ -28,6 +29,14 @@ public class Person1 {
 	
 	public void setAge(int age) {
 		this.age = age;
+	}
+	public int getGradeYear() {
+		return gradeYear;
+	}
+	
+	
+	public void setGradeYear(int gradeYear) {
+		this.gradeYear = gradeYear;
 	}
 	
 	

@@ -5,19 +5,24 @@ public class Student extends Person implements PersonInterface{
 
 	 int stud_id;
 	 String subject1;
+	 double sub1Score;
 	 String subject2;
+	 double sub2Score;
 	 String subject3;
+	 double sub3Score;
 	 String favoriteSubject;
 	 
 	 
 	 
-	 Student(int  id, String name, int age, String gender, String s1, String s2, String s3,  String favSub){
+	 Student(int  id, String name, int age, String gender, String s1, double firstScore, String s2, double secondScore, String s3, double thirdScore,  String favSub){
 		 
 		 super(name, age, gender);
 		 this.stud_id = id;
 		 this.subject1 = s1;
-		 this.subject2 = s2;
-		 this.subject3 = s3;
+		 this.sub1Score = firstScore;
+		 this.sub2Score = secondScore;
+		 this.sub3Score = thirdScore;
+		 
 		 this.favoriteSubject = favSub;
 		 
 	 }
@@ -25,19 +30,14 @@ public class Student extends Person implements PersonInterface{
 
 	 
 	 // from PersonInterface
-	 public double calculate(double a) {
-		  System.out.println("ICalculator - crosssum " + a);
-		    double sum = 0;
-		    while (0 != a) {
-		        sum = sum + (a % 10);
-		        a = a / 10;
-		    }
-		    return sum;
-		
+	 public double calculate(int year) {
+		 //to not count the year you are on currently
+		  double years = 12 - (year+1) ;
+		return years;
 		}
 	 
 	 public double highScore(double sub1, double sub2, double sub3) {
-		 
+		 System.out.println("Inside child class");
 		 double highestScore;
 		 if(sub1>sub2 && sub1>sub3) {
 			 highestScore = sub1;

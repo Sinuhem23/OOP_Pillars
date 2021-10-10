@@ -7,7 +7,7 @@ public interface PersonInterface {
 	//The other method should be of your choice.
 	
 	static final String ORGINIZATION = "Per Scholas Best Coding School";
-	double calculate(double num);
+	double calculate(int num);
 	double highScore(double num1, double num2, double num3);
 
 }

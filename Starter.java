@@ -19,7 +19,7 @@ public class Starter {
 		System.out.println("What is your name: ");
 		String name = scan.nextLine();
 		stud.setName(name);
-		scan.nextLine();
+		
 		
 		//Age
 		System.out.println("What is your age: ");
@@ -73,7 +73,13 @@ public class Starter {
 		System.out.println("What is your favorite subject: ");
 		String favSub = scan.nextLine();
 		stud.setFavoriteSubject(favSub);
+		scan.nextLine();
 		
+		//Grade Year
+		System.out.println("What grade are you in: ");
+		int gradeYear = scan.nextInt();
+		stud.setGradeYear(gradeYear);
+		scan.nextLine();
 		
 	
 //
@@ -81,7 +87,7 @@ public class Starter {
 	 
 	System.out.println();
 	 System.out.println("Id: " + stud.getStud_id());
-
+	 System.out.println("Grade: " + stud.getGradeYear());
 	System.out.println("Name: " + stud.getName());
 	System.out.println("Age: " + stud.getAge());
 	System.out.println("Gender: " + stud.getGender());
@@ -97,7 +103,7 @@ public class Starter {
 	
 	
 			// hold grades to calc
-	Student stud1 = new Student(stud.getStud_id(),stud.getName(),stud.getAge(), stud.getGender(),stud.getSubject1(), stud.getSubject2(), stud.getSubject3(),stud.getFavoriteSubject() );
+	Student stud1 = new Student(stud.getStud_id(),stud.getName(),stud.getAge(), stud.getGender(),stud.getSubject1(),stud.getSub1Grade(), stud.getSubject2(),stud.getSub2Grade(), stud.getSubject3(),stud.getSub3Grade(),stud.getFavoriteSubject() );
 	
 	
 	if(stud1.highScore(firstSubGrade,secondSubGrade,thirdSubGrade) == firstSubGrade) {
@@ -112,8 +118,16 @@ public class Starter {
 	}else {
 		System.out.println("Error. ");
 	}
-	stud1.calculate(40);
-		
+	
+	if(gradeYear<12) {
+	System.out.println("You have " + stud1.calculate(gradeYear) + " years left to graduate highschool.");
+	}else if (gradeYear==12) {
+		System.out.println("Last Year!!!");
+	}else if (gradeYear > 12){
+		System.out.println("You are surpassed highschool");
+	}else {
+		System.out.println("try again");
+	}
 				
 				System.out.println("-----------------");
 				// This display method is being called from our Student class
