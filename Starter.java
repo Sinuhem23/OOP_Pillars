@@ -168,6 +168,7 @@ public class Starter {
 			
 	Employee emp = new Employee(emp1.getEmpName(),emp1.getEmpAge(),emp1.getEmpGender(),emp1.getEmplSalary(), emp1.getEmpBonus(), emp1.getEmplTitle());
 	emp.display();
+	System.out.println("Bonus: " + empBonus + "%");
 	
 	System.out.println("Employee's Net Salary: $" + emp.calculate(empBonus));
 	// enter bonus percentage raise 
