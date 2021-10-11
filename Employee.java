@@ -39,7 +39,7 @@ public class Employee extends Person implements PersonInterface {
 	}
 	
 	public double highScore(double num1, double num2, double num3) {
-		double accumulatedBonus = ((num1 + num2 )* num3);
+		double accumulatedBonus = ((num1 + num2 )* (num3/100));
 		return accumulatedBonus;
 	}
 
