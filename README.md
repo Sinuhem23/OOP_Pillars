@@ -10,6 +10,8 @@
 
 - Abstraction (Interface abstract methods)
 
+---------------------------------------------------------------------------
+
 1. Created a Person class that has a parameterized constructor to make objects. 
 
 2. Created 2 classes Employee and Student as subclasses of the Person  class as a super class.
