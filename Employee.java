@@ -4,36 +4,37 @@ public class Employee extends Person implements PersonInterface {
 
 	double employeeSalary;
 	String employeeTitle;
-	double bonus;
+	int bonus;
 	
 	
-	Employee(String name, int age, String gender, double empSalary, String empTitle){
+	Employee(String name, int age, String gender, double empSalary,  int bonu, String empTitle){
 		
 		super(name, age, gender);
 		this.employeeSalary = empSalary;
 		this.employeeTitle = empTitle;
+		this.bonus = bonu;
 		
 		
 	}
  
 	
-	public void calculate() {
-		bonus = this.employeeSalary * 40/100;
-		
-	}
+//	public void calculate() {
+//		bonus = this.employeeSalary * 40/100;
+//		
+//	}
 	
 	public void display() {
 		super.display();
 		 
-		System.out.println("Employee Salary: " + "$" + this.employeeSalary);
+		
 		System.out.println("Employee Title: " + this.employeeTitle);
-		System.out.println("Bonus: " + "$" + this.bonus);
-		//System.out.println("Employee's Net Salary: " + "$"+ calculate(this.bonus));
+	
+	//System.out.println("Employee's Net Salary: $"+ calculate(this.bonus));
 		 
 	}
 	
 	public double calculate(int bonus) {
-		double netSalary = bonus + this.employeeSalary;
+		double netSalary = bonus / 100;
 		return netSalary;
 	}
 	

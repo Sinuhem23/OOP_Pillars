@@ -3,11 +3,11 @@ package OOP_Pillars;
 public class Person1 {
 	// Getters and Setters
 	
-	public static int idGenerator = 0;
+	public static int studentIdGenerator = 0;
+	public static int employeeIdGenerator = 0;
 
-//	private String pName;
-//	private int pAge;
-//	private char pGender;
+	
+	//Student
 	
 	private int stud_id;
 	private String name;
@@ -21,6 +21,90 @@ public class Person1 {
 	private double sub3Grade;
 	private String favoriteSubject;
 	private int gradeYear;
+	
+	//Employee
+	
+	private int empID;
+	private String empName;
+	private int empAge;
+	private String empGender;
+	private double emplSalary;
+	private int empBonus;
+	private String  emplTitle;
+	
+	
+	
+	public int getEmpBonus() {
+		return empBonus;
+	}
+
+
+	public void setEmpBonus(int empBonus) {
+		this.empBonus = empBonus;
+	}
+	
+	
+	
+	
+	public int getEmpID() {
+		return empID;
+	}
+
+
+	public void setEmpID(int empID) {
+		this.empID = ++employeeIdGenerator;
+		System.out.println("ID: " + this.empID);
+	}
+	
+	
+	public String getEmpName() {
+		return empName;
+	}
+
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+
+	public int getEmpAge() {
+		return empAge;
+	}
+
+
+	public void setEmpAge(int empAge) {
+		this.empAge = empAge;
+	}
+
+
+	public String getEmpGender() {
+		return empGender;
+	}
+
+
+	public void setEmpGender(String empGender) {
+		this.empGender = empGender;
+	}
+
+
+	public double getEmplSalary() {
+		return emplSalary;
+	}
+
+
+	public void setEmplSalary(double emplSalary) {
+		this.emplSalary = emplSalary;
+	}
+
+
+	public String getEmplTitle() {
+		return emplTitle;
+	}
+
+
+	public void setEmplTitle(String emplTitle) {
+		this.emplTitle = emplTitle;
+	}
 	
 	public int getAge() {
 		return age;
@@ -79,7 +163,8 @@ public class Person1 {
 	}
 	public Person1() {
 		
-	this.stud_id = ++idGenerator;
+	this.stud_id = ++studentIdGenerator;
+	this.empID = ++employeeIdGenerator;
 	}
 
 	
@@ -97,7 +182,7 @@ public class Person1 {
 		return stud_id;
 	}
 	public void setStud_id(int stud_id) {
-		this.stud_id = ++idGenerator;
+		this.stud_id = ++studentIdGenerator;
 		System.out.println("ID: " + this.stud_id);
 	}
 	public String getSubject1() {
